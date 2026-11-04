@@ -46,7 +46,12 @@ Vérifié : la page Vite + React s'affiche sur localhost, le compteur marche.
 >   ➜  Network: use --host to expose
 >   ➜  press h + enter to show help
 > [This command was still running in the terminal pane (tab 1) when its output was captured; it keeps running there, where the user can see and interact with it. Use read_terminal with tab_id "1" to check on it.]</bash-stdout><bash-stderr></bash-stderr>
+Vérifié : j'ai relu le PRD, les tâches et l'architecture.
 
-**13:55 · claude**
+**13:56 · claude**
 
-> <bash-input>open -e PROMPTS.md</bash-input><bash-stdout>[No output was captured. The command ran in the terminal pane (tab 0); if it should have printed something, use read_terminal with tab_id "0" to check.]</bash-stdout><bash-stderr></bash-stderr>
+> <bash-input>git commit -m "Ajout du PRD, des tâches et de l'architecture"</bash-input><bash-stdout>[main 252f612] Ajout du PRD, des tâches et de l'architecture
+>  4 files changed, 155 insertions(+), 1 deletion(-)
+>  create mode 100644 PRD.md
+>  create mode 100644 docs/architecture.md
+>  create mode 100644 tasks.md</bash-stdout><bash-stderr></bash-stderr>
