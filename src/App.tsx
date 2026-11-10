@@ -7,6 +7,7 @@ import ExerciseDetailsPage from './pages/ExerciseDetailsPage'
 import ExercisesPage from './pages/ExercisesPage'
 import FavoritesPage from './pages/FavoritesPage'
 import NotFoundPage from './pages/NotFoundPage'
+import RandomPage from './pages/RandomPage'
 import type { Exercise } from './types'
 import { loadFavorites, saveFavorites, toggleFavorite } from './utils/favorites'
 import './App.css'
@@ -70,6 +71,7 @@ function App() {
                 />
               }
             />
+            <Route path="/random" element={<RandomPage exercises={exercises} />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         )}

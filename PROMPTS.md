@@ -335,3 +335,7 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:46 · claude**
 
 > Oui, tout en anglais
+
+**13:48 · claude**
+
+> on continue la tache 7

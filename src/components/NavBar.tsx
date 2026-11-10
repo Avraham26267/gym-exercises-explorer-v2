@@ -12,6 +12,7 @@ function NavBar() {
           Exercises
         </NavLink>
         <NavLink to="/favorites">★ Favorites</NavLink>
+        <NavLink to="/random">🎲 Random</NavLink>
       </div>
     </nav>
   )

@@ -31,6 +31,7 @@
   font-weight: 600;
   color: var(--text);
   text-decoration: none;
+  white-space: nowrap; /* « ★ Favorites » reste sur une seule ligne */
 }
 
 .navbar-links a:hover {
@@ -280,6 +281,14 @@ main {
     padding: 12px 16px;
   }
 
+  .navbar-links {
+    gap: 4px;
+  }
+
+  .navbar-links a {
+    padding: 8px 12px;
+  }
+
   main {
     padding: 20px 16px;
   }
@@ -311,4 +320,28 @@ main {
     flex-basis: auto;
     width: 100%;
   }
+}
+
+/* ---------- La page Random ---------- */
+.random-card {
+  max-width: 560px;
+  align-items: flex-start;
+}
+
+.random-card h2 {
+  font-size: 1.6rem;
+  overflow-wrap: anywhere;
+}
+
+.random-card img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  background: #ffffff;
+}
+
+.random-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
