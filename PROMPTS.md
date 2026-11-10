@@ -339,3 +339,7 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:48 · claude**
 
 > on continue la tache 7
+
+**13:51 · claude**
+
+> tache 9

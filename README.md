@@ -1,75 +1,99 @@
-# React + TypeScript + Vite
+# Gym Exercises Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small web app to explore gym exercises.
+You can see a list of exercises, search one by name, open its page to see the muscles it works and the equipment you need, keep your favorite exercises, and get a random exercise.
 
-Currently, two official plugins are available:
+Made for the final project of the front-end course 2883.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What the app does
 
-## React Compiler
+| Page | Address | What you can do |
+|---|---|---|
+| Exercises | `/` | See the list of exercises (name + category) and search by name. |
+| Exercise details | `/exercises/:id` | See the name, category, muscles, equipment, description and image. Add or remove it from your favorites (★). |
+| Favorites | `/favorites` | See your favorite exercises and remove one. They are saved in the browser (`localStorage`), so they stay after a reload. |
+| Random | `/random` | See a random exercise, click **Another one** to get a new one, or **See details** to open its page. |
+| Page not found | any other address | A clear message and a button to go back to the list. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+On a narrow screen (phone), everything shows in one column.
 
-## Expanding the ESLint configuration
+## The API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The exercises come from the **wger API**, which is free and needs no key:
 
 ```
+https://wger.de/api/v2/exerciseinfo/?language=2&limit=100
+```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+- The app loads the first **100 exercises** (all 966 exercises are about 7 MB and too slow to load).
+- Each exercise has its name and description in many languages (the `translations` list). The app keeps the **English** one (`language: 2`) and removes the HTML tags from the description.
+- While the data loads, the app shows **Loading…**. If the internet is off, or if the server does not answer after 20 seconds, it shows a clear error message.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tools
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Vite + React + TypeScript** (no `any`)
+- **React Router** for the pages
+- **Vitest** + **@vitest/ui** for the tests
+- **Hand-written CSS** with Flexbox (no style library)
+
+## Install and run
+
+You need **Node.js 22** or newer (check with `node -v`).
+
+1. Get the code and go into the folder:
+
+   ```bash
+   git clone https://github.com/Avraham26267/gym-exercises-explorer-v2.git
+   cd gym-exercises-explorer-v2
+   ```
+
+2. Install the packages:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the app:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the address shown in the terminal (usually http://localhost:5173) in your browser.
+
+## Run the tests
+
+Run all the tests once in the terminal:
+
+```bash
+npm test
+```
+
+Or open the Vitest interface in the browser, to see each test in green or red:
+
+```bash
+npm run test:ui
+```
+
+The tests check the real logic of the app (in `src/utils/`): turning an API exercise into a simple `Exercise`, choosing the English translation, removing HTML, finding an exercise by its id, the search filter, the favorites and the random pick.
+
+## Other commands
+
+| Command | What it does |
+|---|---|
+| `npm run build` | Checks the TypeScript types and builds the app for production (in `dist/`). |
+| `npm run lint` | Checks the code with ESLint. |
+| `npm run preview` | Shows the production build locally (after `npm run build`). |
+
+## How the code is organized
 
 ```
+src/
+  types.ts        the Exercise type, and the types of the raw API data
+  api/            the function that calls the wger API (fetch)
+  utils/          the pure logic, tested with Vitest (transform, search, favorites, random)
+  components/     reusable components (NavBar, ExerciseList, ExerciseCard, SearchBar, StatusMessage, FavoriteButton)
+  pages/          one component per page (route)
+```
+
+More details: [PRD.md](PRD.md) (what the app must do), [tasks.md](tasks.md) (the steps) and [docs/architecture.md](docs/architecture.md) (how the code works).
