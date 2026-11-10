@@ -3,10 +3,10 @@ type StatusMessageProps = {
   error: string | null
 }
 
-// Affiche « Chargement… » pendant l'attente, ou le message d'erreur si ça a échoué.
+// Affiche « Loading… » pendant l'attente, ou le message d'erreur si ça a échoué.
 function StatusMessage({ loading, error }: StatusMessageProps) {
   if (loading) {
-    return <p className="status">Chargement…</p>
+    return <p className="status">Loading…</p>
   }
   if (error) {
     return (

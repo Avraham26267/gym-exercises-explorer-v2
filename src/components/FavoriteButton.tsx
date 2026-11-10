@@ -11,7 +11,7 @@ function FavoriteButton({ isFavorite, onToggle }: FavoriteButtonProps) {
       className={isFavorite ? 'button' : 'button button-outline'}
       onClick={onToggle}
     >
-      {isFavorite ? '★ Dans mes favoris' : '☆ Ajouter aux favoris'}
+      {isFavorite ? '★ In my favorites' : '☆ Add to favorites'}
     </button>
   )
 }

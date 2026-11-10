@@ -13,7 +13,7 @@ export async function fetchExercises(): Promise<Exercise[]> {
     signal: AbortSignal.timeout(TIMEOUT_MS),
   })
   if (!response.ok) {
-    throw new Error(`Le serveur a répondu avec l'erreur ${response.status}.`)
+    throw new Error(`The server answered with error ${response.status}.`)
   }
   const data: ApiExerciseResponse = await response.json()
 

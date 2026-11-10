@@ -20,17 +20,17 @@ function FavoritesPage({
   return (
     <>
       <div className="page-header">
-        <h1>★ Mes favoris</h1>
-        <p>Tes favoris restent gardés même si tu fermes ou recharges la page.</p>
+        <h1>★ My favorites</h1>
+        <p>Your favorites stay saved, even if you close or reload the page.</p>
       </div>
       {favorites.length === 0 ? (
         <div className="empty">
           <p>
-            Tu n'as pas encore de favoris. Ouvre un exercice et clique sur « ☆
-            Ajouter aux favoris ».
+            You have no favorites yet. Open an exercise and click “☆ Add to
+            favorites”.
           </p>
           <Link to="/" className="button">
-            Voir les exercices
+            See the exercises
           </Link>
         </div>
       ) : (
@@ -43,7 +43,7 @@ function FavoritesPage({
                 className="button button-danger"
                 onClick={() => onToggleFavorite(exercise.id)}
               >
-                Retirer des favoris
+                Remove from favorites
               </button>
             </li>
           ))}

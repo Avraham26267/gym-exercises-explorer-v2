@@ -331,3 +331,7 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:44 · claude**
 
 > la section favori. Par contre, le retour à liste, tu n'as pas fait de bouton. Rends-le bien clair. Il va falloir le faire en anglais, je pense. Et tu l'as fait en anglais, je crois. Ouais, tu l'as fait en anglais, super.
+
+**13:46 · claude**
+
+> Oui, tout en anglais

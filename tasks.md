@@ -8,11 +8,11 @@ Créer le type `Exercise` dans `src/types.ts`, un fichier JSON avec 5 exercices 
 
 ## 2. Ajouter les pages avec React Router
 Installer React Router. Créer la page liste (`/`), la page détails (`/exercises/:id`, qui lit l'id avec `useParams`), une page introuvable (`*`) et le menu `NavBar` avec des `NavLink`.
-- **Done when:** je clique sur un exercice et j'arrive sur `/exercises/<id>` avec son nom, sa catégorie, ses muscles et son matériel. Le menu me ramène à la liste. Une mauvaise adresse affiche « Page introuvable ».
+- **Done when:** je clique sur un exercice et j'arrive sur `/exercises/<id>` avec son nom, sa catégorie, ses muscles et son matériel. Le menu me ramène à la liste. Une mauvaise adresse affiche « Page not found ».
 
 ## 3. Récupérer les vrais exercices depuis l'API wger
 Remplacer le fichier local par un `fetch` dans un `useEffect`. Transformer les données brutes de l'API en `Exercise`. Afficher les 3 états : chargement, erreur, données (composant `StatusMessage`).
-- **Done when:** je vois « Chargement… », puis la vraie liste. Si je coupe internet et que je recharge, je vois un message d'erreur clair.
+- **Done when:** je vois « Loading… », puis la vraie liste. Si je coupe internet et que je recharge, je vois un message d'erreur clair.
 
 ## 4. Écrire les premiers tests avec Vitest
 Installer Vitest et `@vitest/ui`, ajouter les scripts `test` et `test:ui`. Écrire au moins 5 tests sur la vraie logique : transformer un exercice de l'API, choisir la traduction anglaise, enlever le HTML de la description, trouver un exercice par son id.
@@ -27,8 +27,8 @@ Un bouton ★ sur la page détails ajoute ou retire l'exercice des favoris. Les 
 - **Done when:** j'ajoute 2 exercices en favoris, je recharge la page, et je les vois toujours dans `/favorites`. Je peux en retirer un.
 
 ## 7. Ajouter la page Exercice au hasard
-La page `/random` affiche un exercice tiré au hasard, avec un bouton « Un autre » et un lien vers ses détails.
-- **Done when:** quand je clique sur « Un autre », un nouvel exercice s'affiche, et le lien m'amène à sa page de détails.
+La page `/random` affiche un exercice tiré au hasard, avec un bouton « Another one » et un lien vers ses détails.
+- **Done when:** quand je clique sur « Another one », un nouvel exercice s'affiche, et le lien m'amène à sa page de détails.
 
 ## 8. Mettre en page avec mon propre CSS
 Écrire mon CSS avec Flexbox : menu, liste en cartes, page détails lisible. Sur un écran étroit, tout passe en une colonne.

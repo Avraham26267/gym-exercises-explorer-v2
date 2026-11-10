@@ -7,11 +7,11 @@ type SearchBarProps = {
 function SearchBar({ value, onChange }: SearchBarProps) {
   return (
     <div className="search-bar">
-      <label htmlFor="search">Rechercher un exercice</label>
+      <label htmlFor="search">Search an exercise</label>
       <input
         id="search"
         type="search"
-        placeholder="Ex. : curl"
+        placeholder="e.g. curl"
         value={value}
         onChange={(event) => onChange(event.target.value)}
       />

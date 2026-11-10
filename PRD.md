@@ -21,14 +21,14 @@ Je peux garder mes exercices préférés et tirer un exercice au hasard.
 | `/` | Liste des exercices | Voir tous les exercices (nom + catégorie), chercher par nom. |
 | `/exercises/:id` | Détails d'un exercice | Voir nom, catégorie, muscles, matériel, description, image. Ajouter ou retirer des favoris (★). |
 | `/favorites` | Mes favoris *(page extra 1)* | Voir les exercices gardés en favoris, en retirer un. Les favoris restent après un rechargement (`localStorage`). |
-| `/random` | Exercice au hasard *(page extra 2)* | Voir un exercice tiré au hasard, et cliquer sur « Un autre » pour en tirer un nouveau. |
-| `*` | Page introuvable | Message clair et lien pour revenir à la liste. |
+| `/random` | Exercice au hasard *(page extra 2)* | Voir un exercice tiré au hasard, et cliquer sur « Another one » pour en tirer un nouveau. |
+| `*` | Page introuvable | Message clair (« Page not found ») et lien pour revenir à la liste. |
 
 Un menu en haut de chaque page permet d'aller sur la liste, les favoris et l'exercice au hasard.
 Sur un écran étroit (téléphone), tout s'affiche en une colonne.
 
 ## Ce que je dois voir (critères d'acceptation)
-- When I open the app, I see « Chargement… » puis la liste des exercices.
+- When I open the app, I see « Loading… » puis la liste des exercices.
 - When the API ne répond pas, I see un message d'erreur clair au lieu d'une page vide.
 - When I click on an exercise, I see sa page de détails avec son nom, sa catégorie, ses muscles et son matériel.
 - When I type « curl » dans la recherche, I see seulement les exercices dont le nom contient « curl ».

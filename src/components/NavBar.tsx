@@ -9,9 +9,9 @@ function NavBar() {
       </Link>
       <div className="navbar-links">
         <NavLink to="/" end>
-          Exercices
+          Exercises
         </NavLink>
-        <NavLink to="/favorites">★ Favoris</NavLink>
+        <NavLink to="/favorites">★ Favorites</NavLink>
       </div>
     </nav>
   )

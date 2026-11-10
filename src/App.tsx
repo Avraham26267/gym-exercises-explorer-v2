@@ -35,7 +35,7 @@ function App() {
       .then((data) => setExercises(data))
       .catch(() =>
         setError(
-          "Impossible de charger les exercices : internet est coupé ou le serveur wger ne répond pas. Recharge la page pour réessayer.",
+          "Could not load the exercises: the internet is off or the wger server is not answering. Reload the page to try again.",
         ),
       )
       .finally(() => setLoading(false))

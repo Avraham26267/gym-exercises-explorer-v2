@@ -4,10 +4,10 @@ import { Link } from 'react-router'
 function NotFoundPage() {
   return (
     <div className="empty">
-      <h1>Page introuvable</h1>
-      <p>Cette adresse n'existe pas dans l'appli.</p>
+      <h1>Page not found</h1>
+      <p>This address does not exist in the app.</p>
       <Link to="/" className="button">
-        Retour à la liste
+        Back to the list
       </Link>
     </div>
   )

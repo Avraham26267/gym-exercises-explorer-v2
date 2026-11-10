@@ -9,9 +9,9 @@ type ExerciseDetailsPageProps = {
   onToggleFavorite: (id: number) => void
 }
 
-// Affiche une liste, ou « Aucun » si elle est vide.
+// Affiche une liste, ou « None » si elle est vide.
 function listOrNone(items: string[]): string {
-  return items.length > 0 ? items.join(', ') : 'Aucun'
+  return items.length > 0 ? items.join(', ') : 'None'
 }
 
 // La page "/exercises/:id" : useParams lit l'id dans l'adresse.
@@ -26,9 +26,9 @@ function ExerciseDetailsPage({
   if (!exercise) {
     return (
       <div className="empty">
-        <h1>Exercice introuvable</h1>
+        <h1>Exercise not found</h1>
         <Link to="/" className="button">
-          Retour à la liste
+          Back to the list
         </Link>
       </div>
     )
@@ -37,7 +37,7 @@ function ExerciseDetailsPage({
   return (
     <>
       <Link to="/" className="button button-outline back-link">
-        ← Retour à la liste
+        ← Back to the list
       </Link>
       <article className="exercise-details">
         <div className="details-header">
@@ -54,21 +54,21 @@ function ExerciseDetailsPage({
           )}
           <dl className="details-info">
             <div>
-              <dt>Catégorie</dt>
+              <dt>Category</dt>
               <dd>
                 <span className="category">{exercise.category}</span>
               </dd>
             </div>
             <div>
-              <dt>Muscles principaux</dt>
+              <dt>Main muscles</dt>
               <dd>{listOrNone(exercise.muscles)}</dd>
             </div>
             <div>
-              <dt>Muscles secondaires</dt>
+              <dt>Secondary muscles</dt>
               <dd>{listOrNone(exercise.secondaryMuscles)}</dd>
             </div>
             <div>
-              <dt>Matériel</dt>
+              <dt>Equipment</dt>
               <dd>{listOrNone(exercise.equipment)}</dd>
             </div>
           </dl>
