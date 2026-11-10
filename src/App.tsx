@@ -21,7 +21,7 @@ function App() {
       .then((data) => setExercises(data))
       .catch(() =>
         setError(
-          "Impossible de charger les exercices. Vérifie ta connexion internet, puis recharge la page.",
+          "Impossible de charger les exercices : internet est coupé ou le serveur wger ne répond pas. Recharge la page pour réessayer.",
         ),
       )
       .finally(() => setLoading(false))
