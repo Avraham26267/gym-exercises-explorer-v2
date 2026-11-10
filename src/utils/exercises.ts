@@ -53,3 +53,18 @@ export function findExerciseById(
 ): Exercise | undefined {
   return exercises.find((exercise) => String(exercise.id) === id)
 }
+
+// Garde seulement les exercices dont le nom contient le texte cherché.
+// Majuscules et minuscules comptent pareil. Un texte vide garde toute la liste.
+export function filterExercisesByName(
+  exercises: Exercise[],
+  searchText: string,
+): Exercise[] {
+  const search = searchText.trim().toLowerCase()
+  if (search === '') {
+    return exercises
+  }
+  return exercises.filter((exercise) =>
+    exercise.name.toLowerCase().includes(search),
+  )
+}

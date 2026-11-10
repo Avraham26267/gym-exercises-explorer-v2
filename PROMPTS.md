@@ -166,3 +166,15 @@ Vérifié : ...
 **13:17 · claude**
 
 > tache 4
+
+**13:20 · claude**
+
+> tache 5
+
+**13:20 · claude**
+
+> Le problème, c'est que c'est pas un problème que le prof voit que j'écris tâche 5, tâche 6, tâche 7, genre c'est pas vraiment des vrais prompts. Est-ce qu'il
+
+**13:21 · claude**
+
+> qui va me demander qu'est-ce que je t'ai demandé, etc. et tout. Dis-moi comment on peut le faire pour que ça passe.
