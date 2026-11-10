@@ -33,7 +33,7 @@ https://wger.de/api/v2/exerciseinfo/?language=2&limit=100
 
 - **Vite + React + TypeScript** (no `any`)
 - **React Router** for the pages
-- **Vitest** + **@vitest/ui** for the tests
+- **Vitest** + **@vitest/ui** for the tests, and **React Testing Library** + **jsdom** for the component tests
 - **Hand-written CSS** with Flexbox (no style library)
 
 ## Install and run
@@ -76,6 +76,8 @@ npm run test:ui
 ```
 
 The tests check the real logic of the app (in `src/utils/`): turning an API exercise into a simple `Exercise`, choosing the English translation, removing HTML, finding an exercise by its id, the search filter, the favorites and the random pick.
+
+There are also component tests with **React Testing Library** (in `src/components/components.test.tsx`). They show real components in a fake browser (jsdom) and type or click like a user: typing "curl" filters the list, the ★ button changes its text, the loading and error messages appear, and a card links to the right page.
 
 ## Other commands
 

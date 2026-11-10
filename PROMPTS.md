@@ -347,3 +347,33 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:54 · claude**
 
 > aller on termine
+
+**13:57 · claude**
+
+> Oui, pousse
+
+**13:58 · claude**
+
+> Et là, tu vas me dire qu'on a fait tout le truc. T'es sûr? De toi? Tu aimerais vérifier sur le site de l'appli de la fac. Tout. À l'intégralité.
+
+**13:58 · claude**
+
+> הי יונתן, סורי על חוסר הזמינות
+> כבר מטפל בזה. לירון אמר לי שאתם צריכים הארכהאני די גמיש מבחינת התאריכים. אם אתם צריכים הארכה בשבוע זה בסדר מבחינתי, פשוט התחיל כבר הסמסטר ואני מניח שאתם רוצים לסיים עם זה.מה שחשוב מבחינתי זה שתדסקסו ביניכם ותחליטו על תאריך הגשה ותאריך או שניים למפגשי הגנה
+> אני מעדיף לרכז את זה לתאריך או שניים שמתאים לכולם ושאתם נמצאים במכללה. אפשרי גם בזום.ברגע שניסגר על תאריכים ברורים אעדכן את האקסל ואעלה אותו… אוקיי?
+
+**14:00 · claude**
+
+> donc tout est bon ?
+
+**14:01 · claude**
+
+> faut vise la meilleur note
+
+**14:02 · claude**
+
+> tache 11
+
+**14:02 · claude**
+
+> C'est sûr qu'on peut pas modifier les prompts. Est-ce qu'il va pas vérifier? En gros, tu me réécris les prompts. Comment moi je te parle, tu me le réécris.

@@ -41,3 +41,7 @@ Expliquer ce que fait l'appli, comment l'installer et la lancer, comment lancer 
 ## 10. Vérification finale
 Relire le code, enlever ce qui ne sert plus, vérifier qu'il n'y a aucun `any`.
 - **Done when:** `npm run build`, `npm test` et `npm run lint` passent sans erreur, et chaque critère du `PRD.md` est vrai dans l'appli.
+
+## 11. Tester les composants avec React Testing Library (bonus)
+Installer React Testing Library et jsdom. Écrire des tests qui affichent de vrais composants et cliquent ou tapent dedans comme un utilisateur : la recherche filtre la liste, le bouton ★ change de texte, le message de chargement et d'erreur s'affiche, la carte mène à la bonne page.
+- **Done when:** `npm test` montre les nouveaux tests de composants en vert (avec les anciens), et `npm run build` et `npm run lint` passent toujours.
