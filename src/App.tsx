@@ -1,5 +1,9 @@
-import ExerciseList from './components/ExerciseList'
+import { Route, Routes } from 'react-router'
+import NavBar from './components/NavBar'
 import exercisesData from './data/exercises.json'
+import ExerciseDetailsPage from './pages/ExerciseDetailsPage'
+import ExercisesPage from './pages/ExercisesPage'
+import NotFoundPage from './pages/NotFoundPage'
 import type { Exercise } from './types'
 import './App.css'
 
@@ -8,10 +12,19 @@ const exercises: Exercise[] = exercisesData
 
 function App() {
   return (
-    <main>
-      <h1>Gym Exercises Explorer</h1>
-      <ExerciseList exercises={exercises} />
-    </main>
+    <>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<ExercisesPage exercises={exercises} />} />
+          <Route
+            path="/exercises/:id"
+            element={<ExerciseDetailsPage exercises={exercises} />}
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
+    </>
   )
 }
 
