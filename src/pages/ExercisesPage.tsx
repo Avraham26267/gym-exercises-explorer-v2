@@ -12,18 +12,22 @@ type ExercisesPageProps = {
 function ExercisesPage({ exercises }: ExercisesPageProps) {
   const [searchText, setSearchText] = useState('')
   const visibleExercises = filterExercisesByName(exercises, searchText)
+  const count = visibleExercises.length
 
   return (
     <>
       <div className="page-header">
-        <h1>Exercises</h1>
+        <h1>Find your exercise</h1>
         <p>
-          Click an exercise to see its muscles and equipment.
-          {` ${visibleExercises.length} exercise(s) shown.`}
+          Search by name, then open an exercise to see the muscles it works and
+          the equipment you need.
         </p>
       </div>
       <SearchBar value={searchText} onChange={setSearchText} />
-      {visibleExercises.length === 0 ? (
+      <p className="result-count">
+        {count} {count === 1 ? 'exercise' : 'exercises'}
+      </p>
+      {count === 0 ? (
         <p className="empty">No exercise matches “{searchText}”.</p>
       ) : (
         <ExerciseList exercises={visibleExercises} />

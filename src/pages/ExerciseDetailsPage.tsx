@@ -41,7 +41,10 @@ function ExerciseDetailsPage({
       </Link>
       <article className="exercise-details">
         <div className="details-header">
-          <h1>{exercise.name}</h1>
+          <div className="details-title">
+            <h1>{exercise.name}</h1>
+            <span className="category">{exercise.category}</span>
+          </div>
           <FavoriteButton
             isFavorite={favoriteIds.includes(exercise.id)}
             onToggle={() => onToggleFavorite(exercise.id)}
@@ -49,16 +52,12 @@ function ExerciseDetailsPage({
         </div>
 
         <div className="details-body">
-          {exercise.imageUrl && (
+          {exercise.imageUrl ? (
             <img src={exercise.imageUrl} alt={exercise.name} />
+          ) : (
+            <div className="no-image">No image for this exercise</div>
           )}
           <dl className="details-info">
-            <div>
-              <dt>Category</dt>
-              <dd>
-                <span className="category">{exercise.category}</span>
-              </dd>
-            </div>
             <div>
               <dt>Main muscles</dt>
               <dd>{listOrNone(exercise.muscles)}</dd>
@@ -74,9 +73,14 @@ function ExerciseDetailsPage({
           </dl>
         </div>
 
-        {exercise.description && (
-          <p className="description">{exercise.description}</p>
-        )}
+        <section className="how-to">
+          <h2>How to do it</h2>
+          <p>
+            {exercise.description !== ''
+              ? exercise.description
+              : 'No instructions for this exercise yet.'}
+          </p>
+        </section>
       </article>
     </>
   )

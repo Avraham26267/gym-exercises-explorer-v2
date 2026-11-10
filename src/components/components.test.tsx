@@ -57,6 +57,7 @@ describe('ExercisesPage + SearchBar', () => {
     expect(screen.getByText('Biceps Curl')).toBeTruthy()
     expect(screen.getByText('Hammer Curl')).toBeTruthy()
     expect(screen.queryByText('Bench Press')).toBeNull()
+    expect(screen.getByText('2 exercises')).toBeTruthy()
 
     await user.clear(input)
     expect(screen.getByText('Bench Press')).toBeTruthy()

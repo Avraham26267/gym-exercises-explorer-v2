@@ -421,3 +421,11 @@ Vérifié tâches 10 et 11 : npm test montre 5 fichiers et 34 tests verts.
 **14:15 · claude**
 
 > Alors, commit jusqu'au bout. Après, il va falloir bien vérifier le site, si on a tout bien fait. Ça, je le ferai. Mais vas-y, commit.
+
+**14:27 · claude**
+
+> En termes d'esthétique, on peut quand même arranger le projet. Est-ce que je suis pas fan des textes, c'est pas compréhensible. Vraiment que ce soit clean, comme ça le prof il aime. Voilà.
+
+**14:28 · claude**
+
+> Oui, fais-le

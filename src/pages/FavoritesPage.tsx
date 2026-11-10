@@ -21,7 +21,7 @@ function FavoritesPage({
     <>
       <div className="page-header">
         <h1>★ My favorites</h1>
-        <p>Your favorites stay saved, even if you close or reload the page.</p>
+        <p>The exercises you saved. They stay here even after you reload the page.</p>
       </div>
       {favorites.length === 0 ? (
         <div className="empty">

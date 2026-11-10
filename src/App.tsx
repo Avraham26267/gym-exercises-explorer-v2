@@ -90,6 +90,12 @@ function App() {
           </Routes>
         )}
       </main>
+      <footer className="footer">
+        Exercise data from{' '}
+        <a href="https://wger.de" target="_blank" rel="noreferrer">
+          wger.de
+        </a>
+      </footer>
     </>
   )
 }

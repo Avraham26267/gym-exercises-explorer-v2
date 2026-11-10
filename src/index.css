@@ -59,3 +59,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* L'appli prend toute la hauteur : le pied de page reste en bas, même sur une page courte. */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
