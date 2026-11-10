@@ -413,3 +413,11 @@ Vérifié tâches 10 et 11 : npm test montre 5 fichiers et 34 tests verts.
 **14:13 · claude**
 
 > fait
+
+**14:14 · claude**
+
+> Bon, du coup, là, qu'est-ce qui me reste à faire du devoir avant d'apprendre?
+
+**14:15 · claude**
+
+> Alors, commit jusqu'au bout. Après, il va falloir bien vérifier le site, si on a tout bien fait. Ça, je le ferai. Mais vas-y, commit.
