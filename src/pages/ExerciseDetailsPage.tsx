@@ -36,7 +36,7 @@ function ExerciseDetailsPage({
 
   return (
     <>
-      <Link to="/" className="back-link">
+      <Link to="/" className="button button-outline back-link">
         ← Retour à la liste
       </Link>
       <article className="exercise-details">

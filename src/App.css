@@ -182,10 +182,9 @@ main {
 }
 
 /* ---------- La page détails ---------- */
+/* Le bouton « ← Retour à la liste » au-dessus de la page détails. */
 .back-link {
-  display: inline-block;
-  margin-bottom: 16px;
-  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .exercise-details {
