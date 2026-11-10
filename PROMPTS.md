@@ -397,3 +397,19 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **14:08 · claude**
 
 > Ok, qu'est-ce qui me reste à vérifier? Je trouve qu'il est basique le site. Lui, il recherche quoi en fait? C'est la question.
+
+**14:09 · claude**
+
+> Le random marche.
+
+**14:10 · claude**
+
+> vient de tester, il met test file 5 passes, test 34 passes.
+Vérifié tâche 6 : dans Safari, j'ajoute des favoris, je recharge, ils restent dans Favorites.
+Vérifié tâche 7 : Random marche, Another one change l'exercice et See details ouvre sa page.
+Vérifié tâche 8 : avec la fenêtre Safari étroite, le menu passe au centre et la liste est en une colonne.
+Vérifié tâches 10 et 11 : npm test montre 5 fichiers et 34 tests verts.
+
+**14:13 · claude**
+
+> fait
