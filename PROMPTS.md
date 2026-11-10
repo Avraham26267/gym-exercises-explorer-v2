@@ -311,3 +311,7 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:37 · claude**
 
 > Corriger le blocage
+
+**13:38 · claude**
+
+> tache 6

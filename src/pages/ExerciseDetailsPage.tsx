@@ -1,9 +1,12 @@
 import { Link, useParams } from 'react-router'
+import FavoriteButton from '../components/FavoriteButton'
 import type { Exercise } from '../types'
 import { findExerciseById } from '../utils/exercises'
 
 type ExerciseDetailsPageProps = {
   exercises: Exercise[]
+  favoriteIds: number[]
+  onToggleFavorite: (id: number) => void
 }
 
 // Affiche une liste, ou « Aucun » si elle est vide.
@@ -12,7 +15,11 @@ function listOrNone(items: string[]): string {
 }
 
 // La page "/exercises/:id" : useParams lit l'id dans l'adresse.
-function ExerciseDetailsPage({ exercises }: ExerciseDetailsPageProps) {
+function ExerciseDetailsPage({
+  exercises,
+  favoriteIds,
+  onToggleFavorite,
+}: ExerciseDetailsPageProps) {
   const { id } = useParams()
   const exercise = findExerciseById(exercises, id)
 
@@ -28,6 +35,10 @@ function ExerciseDetailsPage({ exercises }: ExerciseDetailsPageProps) {
   return (
     <article className="exercise-details">
       <h1>{exercise.name}</h1>
+      <FavoriteButton
+        isFavorite={favoriteIds.includes(exercise.id)}
+        onToggle={() => onToggleFavorite(exercise.id)}
+      />
       {exercise.imageUrl && (
         <img src={exercise.imageUrl} alt={exercise.name} width={300} />
       )}

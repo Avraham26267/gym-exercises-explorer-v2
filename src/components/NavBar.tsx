@@ -7,6 +7,7 @@ function NavBar() {
       <NavLink to="/" end>
         Exercices
       </NavLink>
+      <NavLink to="/favorites">Favoris</NavLink>
     </nav>
   )
 }
