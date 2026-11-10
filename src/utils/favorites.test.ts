@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import type { Exercise } from '../types'
-import { getFavoriteExercises, parseFavorites, toggleFavorite } from './favorites'
+import {
+  canSaveFavorites,
+  getFavoriteExercises,
+  parseFavorites,
+  toggleFavorite,
+} from './favorites'
 
 describe('toggleFavorite', () => {
   it("ajoute l'id quand il n'est pas encore en favori", () => {
@@ -55,5 +60,12 @@ describe('getFavoriteExercises', () => {
     ]
     const names = getFavoriteExercises(exercises, [3, 1]).map((e) => e.name)
     expect(names).toEqual(['Squat', 'Deadlift'])
+  })
+})
+
+describe('canSaveFavorites', () => {
+  it('renvoie false quand le navigateur bloque localStorage', () => {
+    // Ici (Node), localStorage n'existe pas : c'est comme un navigateur qui le bloque.
+    expect(canSaveFavorites()).toBe(false)
   })
 })

@@ -345,3 +345,13 @@ main {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+/* ---------- L'avertissement quand le navigateur bloque localStorage ---------- */
+.storage-warning {
+  margin: 0;
+  padding: 10px 24px;
+  text-align: center;
+  background: var(--accent-soft);
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+}

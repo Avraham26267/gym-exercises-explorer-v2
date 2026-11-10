@@ -9,7 +9,12 @@ import FavoritesPage from './pages/FavoritesPage'
 import NotFoundPage from './pages/NotFoundPage'
 import RandomPage from './pages/RandomPage'
 import type { Exercise } from './types'
-import { loadFavorites, saveFavorites, toggleFavorite } from './utils/favorites'
+import {
+  canSaveFavorites,
+  loadFavorites,
+  saveFavorites,
+  toggleFavorite,
+} from './utils/favorites'
 import './App.css'
 
 function App() {
@@ -20,6 +25,9 @@ function App() {
 
   // Les favoris : une liste d'ids, lue dans localStorage au démarrage.
   const [favoriteIds, setFavoriteIds] = useState<number[]>(loadFavorites)
+
+  // false si le navigateur bloque localStorage : on prévient l'utilisateur.
+  const [canSave] = useState(canSaveFavorites)
 
   // À chaque changement des favoris, on les sauvegarde dans localStorage.
   useEffect(() => {
@@ -45,6 +53,12 @@ function App() {
   return (
     <>
       <NavBar />
+      {!canSave && (
+        <p className="storage-warning" role="alert">
+          ⚠️ Your browser blocks saving data for this site, so your favorites
+          will be lost when you reload the page.
+        </p>
+      )}
       <main>
         {loading || error ? (
           <StatusMessage loading={loading} error={error} />

@@ -377,3 +377,23 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **14:02 · claude**
 
 > C'est sûr qu'on peut pas modifier les prompts. Est-ce qu'il va pas vérifier? En gros, tu me réécris les prompts. Comment moi je te parle, tu me le réécris.
+
+**14:04 · claude**
+
+> Ok, donc qu'est-ce que je dois vérifier? Et envoie-moi le lien.
+
+**14:06 · claude**
+
+> Quand je recharge, ça enlève l'ajouteur favori. Donc ça marche pas pour les favoris. Genre ça enregistre pas, ça enregistre que t'as compris. Donc j'ai ces commandes R, ça, elle n'est pas toujours là. Donc ça c'est un problème. Et après je teste le reste. Mais dis-moi après qu'est-ce qui reste à
+
+**14:07 · claude**
+
+> non  pas fenetre prive
+
+**14:08 · claude**
+
+> C'est bon, c'est réglé, j'ai rechargé la page, ça a marché.
+
+**14:08 · claude**
+
+> Ok, qu'est-ce qui me reste à vérifier? Je trouve qu'il est basique le site. Lui, il recherche quoi en fait? C'est la question.

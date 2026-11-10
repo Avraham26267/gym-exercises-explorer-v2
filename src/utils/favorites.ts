@@ -54,3 +54,16 @@ export function saveFavorites(favoriteIds: number[]): void {
     // Si le navigateur bloque localStorage, l'appli continue de marcher sans sauvegarde.
   }
 }
+
+// Vérifie si le navigateur permet d'écrire dans localStorage.
+// Certains réglages (par exemple « Bloquer tous les cookies » dans Safari) l'interdisent.
+export function canSaveFavorites(): boolean {
+  try {
+    const testKey = '__test__'
+    localStorage.setItem(testKey, '1')
+    localStorage.removeItem(testKey)
+    return true
+  } catch {
+    return false
+  }
+}
