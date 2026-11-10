@@ -4,8 +4,23 @@
     {
       "name": "gym-v2",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5173
+    },
+    {
+      "name": "gym-v2-tests",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "test:ui",
+        "--",
+        "--open=false",
+        "--watch"
+      ],
+      "port": 51204
     }
   ]
 }
