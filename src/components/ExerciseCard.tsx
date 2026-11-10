@@ -5,15 +5,13 @@ type ExerciseCardProps = {
   exercise: Exercise
 }
 
-// Un exercice dans la liste : son nom et sa catégorie, avec un lien vers ses détails.
+// Un exercice dans la liste : toute la carte est un lien vers ses détails.
 function ExerciseCard({ exercise }: ExerciseCardProps) {
   return (
-    <article className="exercise-card">
-      <h2>
-        <Link to={`/exercises/${exercise.id}`}>{exercise.name}</Link>
-      </h2>
-      <p>{exercise.category}</p>
-    </article>
+    <Link to={`/exercises/${exercise.id}`} className="exercise-card">
+      <h2>{exercise.name}</h2>
+      <span className="category">{exercise.category}</span>
+    </Link>
   )
 }
 

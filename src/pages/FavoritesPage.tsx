@@ -19,19 +19,31 @@ function FavoritesPage({
 
   return (
     <>
-      <h1>Mes favoris</h1>
+      <div className="page-header">
+        <h1>★ Mes favoris</h1>
+        <p>Tes favoris restent gardés même si tu fermes ou recharges la page.</p>
+      </div>
       {favorites.length === 0 ? (
-        <p>
-          Tu n'as pas encore de favoris. Ouvre un exercice et clique sur ☆ pour
-          l'ajouter. <Link to="/">Voir la liste</Link>
-        </p>
+        <div className="empty">
+          <p>
+            Tu n'as pas encore de favoris. Ouvre un exercice et clique sur « ☆
+            Ajouter aux favoris ».
+          </p>
+          <Link to="/" className="button">
+            Voir les exercices
+          </Link>
+        </div>
       ) : (
         <ul className="exercise-list">
           {favorites.map((exercise) => (
             <li key={exercise.id}>
               <ExerciseCard exercise={exercise} />
-              <button type="button" onClick={() => onToggleFavorite(exercise.id)}>
-                Retirer
+              <button
+                type="button"
+                className="button button-danger"
+                onClick={() => onToggleFavorite(exercise.id)}
+              >
+                Retirer des favoris
               </button>
             </li>
           ))}

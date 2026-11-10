@@ -1,13 +1,18 @@
-import { NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router'
 
 // Le menu en haut de chaque page. NavLink ajoute la classe "active" sur la page ouverte.
 function NavBar() {
   return (
     <nav className="navbar">
-      <NavLink to="/" end>
-        Exercices
-      </NavLink>
-      <NavLink to="/favorites">Favoris</NavLink>
+      <Link to="/" className="navbar-brand">
+        💪 Gym Exercises Explorer
+      </Link>
+      <div className="navbar-links">
+        <NavLink to="/" end>
+          Exercices
+        </NavLink>
+        <NavLink to="/favorites">★ Favoris</NavLink>
+      </div>
     </nav>
   )
 }

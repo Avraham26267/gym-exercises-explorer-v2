@@ -15,10 +15,16 @@ function ExercisesPage({ exercises }: ExercisesPageProps) {
 
   return (
     <>
-      <h1>Gym Exercises Explorer</h1>
+      <div className="page-header">
+        <h1>Exercices</h1>
+        <p>
+          Clique sur un exercice pour voir ses muscles et son matériel.
+          {` ${visibleExercises.length} exercice(s) affiché(s).`}
+        </p>
+      </div>
       <SearchBar value={searchText} onChange={setSearchText} />
       {visibleExercises.length === 0 ? (
-        <p>Aucun exercice ne correspond à « {searchText} ».</p>
+        <p className="empty">Aucun exercice ne correspond à « {searchText} ».</p>
       ) : (
         <ExerciseList exercises={visibleExercises} />
       )}

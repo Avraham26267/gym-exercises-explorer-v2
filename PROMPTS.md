@@ -315,3 +315,11 @@ Vérifié tâches 4 et 5 : npm test montre 13 tests verts. Je tape curl, je ne v
 **13:38 · claude**
 
 > tache 6
+
+**13:40 · claude**
+
+> Claire, la page, va falloir que tu me la retravailles. Comment tu veux que je sache? Fais-moi un truc quand même un peu plus clean. Est-ce que c'est dans le devoir ou pas? Est-ce que si moi-même je comprends même pas où ça marche, j'ai trouvé le bouton favori, il est minuscule déjà. Et je trouve pas la section des favoris.
+
+**13:41 · claude**
+
+> Oui, fais-la

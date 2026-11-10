@@ -3,11 +3,15 @@ type FavoriteButtonProps = {
   onToggle: () => void
 }
 
-// Le bouton ★ : étoile pleine si l'exercice est en favori, étoile vide sinon.
+// Le bouton ★ : plein si l'exercice est en favori, en contour sinon.
 function FavoriteButton({ isFavorite, onToggle }: FavoriteButtonProps) {
   return (
-    <button type="button" className="favorite-button" onClick={onToggle}>
-      {isFavorite ? '★ Retirer des favoris' : '☆ Ajouter aux favoris'}
+    <button
+      type="button"
+      className={isFavorite ? 'button' : 'button button-outline'}
+      onClick={onToggle}
+    >
+      {isFavorite ? '★ Dans mes favoris' : '☆ Ajouter aux favoris'}
     </button>
   )
 }

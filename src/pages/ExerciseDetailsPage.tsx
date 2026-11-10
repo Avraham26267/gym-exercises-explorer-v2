@@ -25,38 +25,60 @@ function ExerciseDetailsPage({
 
   if (!exercise) {
     return (
-      <>
+      <div className="empty">
         <h1>Exercice introuvable</h1>
-        <Link to="/">Retour à la liste</Link>
-      </>
+        <Link to="/" className="button">
+          Retour à la liste
+        </Link>
+      </div>
     )
   }
 
   return (
-    <article className="exercise-details">
-      <h1>{exercise.name}</h1>
-      <FavoriteButton
-        isFavorite={favoriteIds.includes(exercise.id)}
-        onToggle={() => onToggleFavorite(exercise.id)}
-      />
-      {exercise.imageUrl && (
-        <img src={exercise.imageUrl} alt={exercise.name} width={300} />
-      )}
-      <p>
-        <strong>Catégorie :</strong> {exercise.category}
-      </p>
-      <p>
-        <strong>Muscles principaux :</strong> {listOrNone(exercise.muscles)}
-      </p>
-      <p>
-        <strong>Muscles secondaires :</strong>{' '}
-        {listOrNone(exercise.secondaryMuscles)}
-      </p>
-      <p>
-        <strong>Matériel :</strong> {listOrNone(exercise.equipment)}
-      </p>
-      <p>{exercise.description}</p>
-    </article>
+    <>
+      <Link to="/" className="back-link">
+        ← Retour à la liste
+      </Link>
+      <article className="exercise-details">
+        <div className="details-header">
+          <h1>{exercise.name}</h1>
+          <FavoriteButton
+            isFavorite={favoriteIds.includes(exercise.id)}
+            onToggle={() => onToggleFavorite(exercise.id)}
+          />
+        </div>
+
+        <div className="details-body">
+          {exercise.imageUrl && (
+            <img src={exercise.imageUrl} alt={exercise.name} />
+          )}
+          <dl className="details-info">
+            <div>
+              <dt>Catégorie</dt>
+              <dd>
+                <span className="category">{exercise.category}</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Muscles principaux</dt>
+              <dd>{listOrNone(exercise.muscles)}</dd>
+            </div>
+            <div>
+              <dt>Muscles secondaires</dt>
+              <dd>{listOrNone(exercise.secondaryMuscles)}</dd>
+            </div>
+            <div>
+              <dt>Matériel</dt>
+              <dd>{listOrNone(exercise.equipment)}</dd>
+            </div>
+          </dl>
+        </div>
+
+        {exercise.description && (
+          <p className="description">{exercise.description}</p>
+        )}
+      </article>
+    </>
   )
 }
 
