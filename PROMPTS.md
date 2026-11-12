@@ -506,3 +506,11 @@ Vérifié tâches 10 et 11 : npm test montre 5 fichiers et 34 tests verts.
 **15:19 · claude**
 
 > L'API wger met parfois 40 s à répondre et l'appli affiche une erreur. Passe TIMEOUT_MS à 60000 dans src/api/wger.ts et ajoute un bouton "Try again" sur le message d'erreur. Puis lance npm test et npm run build.
+
+**15:22 · claude**
+
+> Oui, pousse
+
+**15:28 · claude**
+
+> J'ai vérifié les changements. Pour cette fois, je t'autorise : fais le commit "Journal des prompts" avec PROMPTS.md, puis git push. Montre-moi le résultat du push.
