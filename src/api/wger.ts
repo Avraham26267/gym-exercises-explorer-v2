@@ -4,8 +4,8 @@ import { toExercise } from '../utils/exercises'
 // L'adresse de l'API wger : les exercices, en anglais (language=2), les 100 premiers.
 const API_URL = 'https://wger.de/api/v2/exerciseinfo/?language=2&limit=100'
 
-// Si l'API n'a pas répondu après 20 secondes, on arrête d'attendre (sinon « Chargement… » pour toujours).
-const TIMEOUT_MS = 20000
+// Si l'API n'a pas répondu après 60 secondes, on arrête d'attendre (sinon « Chargement… » pour toujours).
+const TIMEOUT_MS = 60000
 
 // Appelle l'API, vérifie la réponse et transforme les données brutes en Exercise.
 export async function fetchExercises(): Promise<Exercise[]> {

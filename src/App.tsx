@@ -38,17 +38,27 @@ function App() {
     setFavoriteIds((current) => toggleFavorite(current, id))
   }
 
-  // Le tableau vide [] veut dire : appeler l'API une seule fois, au démarrage.
+  // Le numéro de l'essai : il change quand on clique sur « Try again ».
+  const [attempt, setAttempt] = useState(0)
+
+  // Appelle l'API au démarrage, puis à chaque nouvel essai (quand attempt change).
   useEffect(() => {
     fetchExercises()
       .then((data) => setExercises(data))
       .catch(() =>
         setError(
-          "Could not load the exercises: the internet is off or the wger server is not answering. Reload the page to try again.",
+          'Could not load the exercises: the internet is off or the wger server is not answering.',
         ),
       )
       .finally(() => setLoading(false))
-  }, [])
+  }, [attempt])
+
+  // « Try again » : on efface l'erreur, on remet « Loading… » et on relance l'appel.
+  function handleRetry() {
+    setError(null)
+    setLoading(true)
+    setAttempt((current) => current + 1)
+  }
 
   return (
     <>
@@ -61,7 +71,11 @@ function App() {
       )}
       <main>
         {loading || error ? (
-          <StatusMessage loading={loading} error={error} />
+          <StatusMessage
+            loading={loading}
+            error={error}
+            onRetry={handleRetry}
+          />
         ) : (
           <Routes>
             <Route path="/" element={<ExercisesPage exercises={exercises} />} />

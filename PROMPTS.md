@@ -437,3 +437,72 @@ Vérifié tâches 10 et 11 : npm test montre 5 fichiers et 34 tests verts.
 **14:32 · claude**
 
 > Que fait Pousse commit sur GitHub.
+
+**14:33 · claude**
+
+> <bash-input>git add -A && git commit -m "Mise en page plus claire et journal des prompts"</bash-input><bash-stdout>[main 73b0df8] Mise en page plus claire et journal des prompts
+>  1 file changed, 8 insertions(+)</bash-stdout><bash-stderr></bash-stderr>
+
+**14:33 · claude**
+
+> <bash-input>git push</bash-input><bash-stdout>Enumerating objects: 30, done.
+> Counting objects: 100% (30/30), done.
+> Delta compression using up to 10 threads
+> Compressing objects: 100% (17/17), done.
+> Writing objects: 100% (17/17), 3.36 KiB | 1.68 MiB/s, done.
+> Total 17 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+> remote: Resolving deltas: 100% (13/13), completed with 11 local objects.
+> To https://github.com/Avraham26267/gym-exercises-explorer-v2.git
+>    b564cb3..73b0df8  main -&gt; main</bash-stdout><bash-stderr></bash-stderr>
+
+**14:33 · claude**
+
+> <bash-input>git push</bash-input><bash-stdout>Everything up-to-date</bash-stdout><bash-stderr></bash-stderr>
+
+## 2026-11-12
+
+**14:56 · claude**
+
+> Ok, bah maintenant tu vas m'apprendre. Vas-y,
+
+**15:02 · claude**
+
+> <pasted_content id="d100">
+> RÔLE ET ENJEUX : tu es mon tuteur pour mon projet final du cours 2883 (front-end, prof Yariv Gilad). Je rends demain 13/11 avant 09:00 (une seule remise possible), puis j'ai un oral de ~7 min le 17/11 sans IA, où le prof pose des questions difficiles sur MON code. Note : 60 projet / 20 process / 20 oral.
+> 
+> PROJET : ~/Applications/gym-exercises-explorer-v2 (React + TypeScript, API wger). LECTURE SEULE : tu ne modifies, ne commites et ne pushes RIEN dans ce dossier. Si quelque chose doit être corrigé, dis-moi quoi et je le ferai moi-même dans une session ouverte sur le projet.
+> 
+> PARTIE 1 — VÉRIFICATION (maintenant, c'est urgent)
+> Vérifie chaque exigence du prof dans le code, en lançant les commandes (build, tests, test:ui) pour de vrai :
+> - TypeScript sans aucun `any`
+> - React Router : page liste, page /items/:id avec useParams, 2+ autres pages interactives, navigation avec Link/NavLink
+> - au moins 4 composants à moi, chacun dans son fichier
+> - fetch dans useEffect avec états loading / error / data
+> - recherche ou filtre
+> - au moins 5 tests Vitest sur de la vraie logique + @vitest/ui + script `test:ui`
+> - mon propre CSS + affichage correct sur écran étroit
+> - README (l'app, comment la lancer, les tests, l'API)
+> - un commit par tâche
+> - PRD.md, tasks.md (12 tâches max, chacune avec « Done when: »), PROMPTS.md
+> - le dépôt GitHub est public et à jour (tout est pushé)
+> Si tu peux, ouvre aussi la page Notion du prof dans le navigateur intégré (https://app.notion.com/p/2883-3f91d753ff15812c853ee8f8379750a4, faire défiler car elle charge au fur et à mesure) pour vérifier qu'aucune exigence ne manque dans ma liste.
+> 
+> Réponds dans ce format : une ligne par exigence → ✅ OK / ❌ MANQUE / ⚠️ À VÉRIFIER + le fichier + ce que j'ai à faire (1 phrase). Puis la liste des corrections, de la plus urgente à la moins urgente. Ne dis jamais « OK » sans l'avoir vérifié.
+> 
+> PARTIE 2 — M'APPRENDRE LE PROJET (après la remise, jusqu'au 17/11)
+> Je ne suis pas développeur, j'ai codé avec l'IA. Explique-moi comme à un débutant total, en français simple, avec les mots techniques en anglais entre parenthèses (le prof les utilisera).
+> Une étape à la fois, et attends que je dise « suivant » :
+> 1. L'app en 5 phrases : ce qu'elle fait, comment les fichiers sont reliés.
+> 2. Chaque fichier important : à quoi il sert, et les 2-3 lignes clés expliquées.
+> 3. Le chemin complet d'une action : je tape une recherche → que se passe-t-il, fichier par fichier.
+> 4. Les notions du cours dans MON code : useState, useEffect, props, useParams, Router, TypeScript, les tests.
+> 5. Les 20 questions les plus probables du prof (dont les pièges : « pourquoi ce choix ? », « que se passe-t-il si l'API ne répond pas ? », « montre-moi où… »), avec une réponse courte que je peux dire à l'oral.
+> 6. Un quiz : tu me poses les questions une par une, je réponds, tu corriges.
+> À la fin, écris une fiche de révision dans ~/Applications/fac-cours/ (pas dans le dossier du projet).
+> 
+> Commence par la partie 1.
+> </pasted_content id="d100">
+
+**15:19 · claude**
+
+> L'API wger met parfois 40 s à répondre et l'appli affiche une erreur. Passe TIMEOUT_MS à 60000 dans src/api/wger.ts et ajoute un bouton "Try again" sur le message d'erreur. Puis lance npm test et npm run build.

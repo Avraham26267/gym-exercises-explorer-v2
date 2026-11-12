@@ -102,6 +102,16 @@ describe('StatusMessage', () => {
     render(<StatusMessage loading={false} error="Network error" />)
     expect(screen.getByRole('alert').textContent).toBe('Network error')
   })
+
+  it('appelle onRetry quand on clique sur « Try again »', async () => {
+    const user = userEvent.setup()
+    const onRetry = vi.fn()
+    render(
+      <StatusMessage loading={false} error="Network error" onRetry={onRetry} />,
+    )
+    await user.click(screen.getByRole('button', { name: 'Try again' }))
+    expect(onRetry).toHaveBeenCalledTimes(1)
+  })
 })
 
 describe('ExerciseCard', () => {

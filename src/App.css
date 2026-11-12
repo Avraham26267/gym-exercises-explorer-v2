@@ -334,6 +334,11 @@ main {
   font-weight: 600;
 }
 
+/* Le bouton « Try again » sous le message d'erreur. */
+.retry-button {
+  margin-top: 16px;
+}
+
 .empty {
   display: flex;
   flex-direction: column;
